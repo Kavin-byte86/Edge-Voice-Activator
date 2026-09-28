@@ -1,0 +1,73 @@
+# EdgeVoice Pipeline Configuration
+
+project_name: "edge_voice"
+keyword: "Akash Go"
+target_device: "ESP32-WROOM-32 (38-Pin)"
+microphone: "INMP441 I2S"
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  pcm_format: "int16"
+  window_duration_sec: 1.0  # 1.0 second inference window
+  total_samples: 16000      # 16000 samples @ 16kHz
+
+features:
+  feature_type: "log_mel"
+  frame_size_ms: 40         # 40 ms window (640 samples)
+  frame_step_ms: 20         # 20 ms hop (320 samples)
+  fft_length: 512
+  mel_bins: 40              # 40 Mel bins
+  lower_frequency: 20.0
+  upper_frequency: 7500.0
+  num_frames: 49            # (1000 - 40) / 20 + 1 = 49 frames
+  input_shape: [49, 40, 1]  # Matrix fed into DS-CNN
+
+dataset:
+  positive_target: 600    # Real gTTS: 3 phrases × 7 TLDs × 2 slow × 7 rates = 294 unique combos → padded to 600
+  unknown_target: 1500   # Enough variety for real TTS unknowns
+  noise_target: 500
+  silence_target: 300
+  split_ratios:
+    train: 0.80
+    val: 0.10
+    test: 0.10
+
+model_search:
+  models:
+    model_a_small:
+      conv_filters: 16
+      ds_filters: [32, 32, 64]
+      ds_strides: [1, 2, 1]
+      dropout: 0.2
+    model_b_smaller:
+      conv_filters: 12
+      ds_filters: [24, 24, 48]
+      ds_strides: [1, 2, 1]
+      dropout: 0.2
+    model_c_very_small:
+      conv_filters: 8
+      ds_filters: [16, 16, 32]
+      ds_strides: [1, 2, 1]
+      dropout: 0.1
+    model_d_ultra_small:
+      conv_filters: 6
+      ds_filters: [12, 12, 24]
+      ds_strides: [1, 2, 1]
+      dropout: 0.1
+
+training:
+  batch_size: 32
+  epochs: 60           # Increased for real-speech convergence
+  learning_rate: 0.001
+  early_stopping_patience: 15  # More patience for real speech
+  seed: 42
+
+trigger_logic:
+  confidence_threshold: 0.70
+  consecutive_detections: 2
+  cooldown_ms: 2000
+
+budget:
+  target_ram_kb: 256
+  target_cpu_idle_percent: 10.0
