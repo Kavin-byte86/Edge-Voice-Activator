@@ -1,4 +1,4 @@
-﻿# EdgeVoice: Edge Voice Activator for "Akash Go"
+# EdgeVoice: Edge Voice Activator for "Akash Go"
 ### ESP32-WROOM-32 (38-Pin) · TFLite Micro INT8 · Zero Cloud Dependency
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 ---
 
-**EdgeVoice** is a complete, reproducible, end-to-end TinyML keyword-spotting (KWS) system that detects the custom wake word **"Akash Go"** entirely on-device. No cloud, no API, no generic wake-word engine — just a tiny **16.80 KB INT8 neural network** running at **4.50% CPU utilization** on a bare ESP32-WROOM-32 microcontroller.
+**EdgeVoice** is a TinyML keyword-spotting (KWS) system that detects the custom wake word **"Akash Go"** entirly on-device. No cloud, no API, no generic wake-word engine — just a tiny **16.80 KB INT8 neural network** running at **4.50% CPU utilization** on a bare ESP32-WROOM-32 microcontroller.
 
 ---
 
@@ -240,7 +240,7 @@ ffmpeg -version
 
 ## Dataset Generation & Pipeline
 
-The dataset is **fully synthetic** — generated with TTS engines (gTTS + pyttsx3) to simulate diverse speakers. This eliminates manual recording requirements and ensures speaker independence.
+The dataset is **fully synthetic** — generated with TTS engines (gTTS + pyttsx3) to simulate diverse speakers. This removes the need for manual recordings and makes sure there's no speaker overlap.
 
 ### Dataset Composition
 
@@ -272,7 +272,7 @@ The dataset is **fully synthetic** — generated with TTS engines (gTTS + pyttsx
 
 ### DS-CNN (Depthwise Separable CNN)
 
-The model uses a lightweight Depthwise Separable CNN architecture, chosen for its excellent accuracy-to-parameter trade-off on embedded targets.
+The model uses a lightweight Depthwise Separable CNN architecture, choosen for its good accuracy-to-parameter tradeoff on embeded targets.
 
 ```
 Input: Log-Mel Spectrogram (49 × 40 × 1)
@@ -320,7 +320,7 @@ Input: Log-Mel Spectrogram (49 × 40 × 1)
 
 ## Step-by-Step Reproduction Guide
 
-Run all commands from the repository root. Use `py -3.10` to ensure the correct Python version.
+Run all commands from the repo root. Make sure to use `py -3.10` otherwise it wont work with TF 2.15.
 
 ### Step 1 — Synthesize Dataset
 
@@ -481,7 +481,7 @@ py -3.10 scripts/hardware_test.py --port COM11 --baud 115200
 | **False Activations / Hour** | **0** |
 | **Quantization Accuracy Degradation** | **0.00%** |
 
-> **Note on accuracy**: The model is tuned for **precision = 1.0** — it never falsely activates. Recall is traded off to ensure zero false positives, which is the primary constraint for a wake-word detector.
+> **Note on accuracy**: The model is tuned for **precision = 1.0** — it dosent false activate. Recall is traded off to keep false positives at zero, which is the main thing we care about for a wake-word detector.
 
 ---
 
