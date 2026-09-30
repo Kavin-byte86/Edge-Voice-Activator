@@ -1,4 +1,4 @@
-#include "diagnostics.h"
+﻿#include "diagnostics.h"
 #include "config.h"
 #include "i2s_audio.h"
 #include "feature_provider.h"
@@ -66,7 +66,7 @@ void print_hardware_benchmark_report(uint32_t feature_extraction_ms, uint32_t in
     bool int8_pass = true;
 
     Serial.println("====================================");
-    Serial.println("EDGEVOICE KWS BENCHMARK");
+    Serial.println("VOICEEDGE KWS BENCHMARK");
     Serial.println("====================================");
     Serial.println();
     Serial.println("Device:");

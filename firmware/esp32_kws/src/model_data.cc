@@ -1,4 +1,4 @@
-/* EdgeVoice Auto-generated Model Source Array (Flash Storage) */
+﻿/* VoiceEdge Auto-generated Model Source Array (Flash Storage) */
 #include "model_data.h"
 
 const int g_model_len = 13792;

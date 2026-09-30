@@ -1,4 +1,4 @@
-/* EdgeVoice ESP32-WROOM-32 (38-Pin) Hardware & KWS System Configuration */
+﻿/* VoiceEdge ESP32-WROOM-32 (38-Pin) Hardware & KWS System Configuration */
 #ifndef CONFIG_H_
 #define CONFIG_H_
 

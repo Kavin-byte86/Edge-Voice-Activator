@@ -1,4 +1,4 @@
-#include <Arduino.h>
+﻿#include <Arduino.h>
 #include "config.h"
 #include "i2s_audio.h"
 #include "feature_provider.h"
@@ -18,8 +18,8 @@ void setup() {
     Serial.begin(115200);
     while (!Serial && millis() < 2000);
 
-    Serial.println("\n[EdgeVoice] ESP32-WROOM-32 Edge Voice Activator Starting...");
-    Serial.printf("[EdgeVoice] Target Keyword: '%s'\n", "Akash Go");
+    Serial.println("\n[VOICEEDGE] ESP32-WROOM-32 VoiceEdge Activator Starting...");
+    Serial.printf("[VOICEEDGE] Target Keyword: '%s'\n", "Akash Go");
 
     init_diagnostics();
 
@@ -55,7 +55,7 @@ void setup() {
         Serial.printf("  loopTask Stack HWM : %u B free\n", mem.loop_stack_hwm_bytes);
     }
 
-    Serial.println("\n[EdgeVoice] Continuous Listening Active...\n");
+    Serial.println("\n[VOICEEDGE] Continuous Listening Active...\n");
 }
 
 void loop() {

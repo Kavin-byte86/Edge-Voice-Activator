@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-EdgeVoice TFLite-to-C Array Converter (Flash PROGMEM Optimized)
+VoiceEdge TFLite-to-C Array Converter (Flash PROGMEM Optimized)
 Converts quantized .tflite INT8 model into alignas(16) PROGMEM static byte array C/C++ files.
 Output header and source files are placed directly in the ESP32 firmware src directory.
 """
@@ -33,7 +33,7 @@ def convert_tflite_to_c(model_name="model_a_small"):
     model_len = len(model_bytes)
     print(f"Converting '{model_name}_int8.tflite' ({model_len} bytes) into C byte array (PROGMEM)...")
     
-    header_content = f"""/* EdgeVoice Auto-generated Model Header */
+    header_content = f"""/* VoiceEdge Auto-generated Model Header */
 #ifndef MODEL_DATA_H_
 #define MODEL_DATA_H_
 
@@ -59,7 +59,7 @@ extern const int g_model_len;
         
     array_body = ",\n".join(hex_lines)
     
-    source_content = f"""/* EdgeVoice Auto-generated Model Source Array (Flash Storage) */
+    source_content = f"""/* VoiceEdge Auto-generated Model Source Array (Flash Storage) */
 #include "model_data.h"
 
 const int g_model_len = {model_len};

@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-EdgeVoice Dataset Generator - Real gTTS Speech Synthesis
+VoiceEdge Dataset Generator - Real gTTS Speech Synthesis
 =========================================================
 Synthesises REAL human-like TTS audio using Google Text-to-Speech (gTTS).
 All samples are 16kHz, 16-bit PCM Mono WAV, exactly 1.0 second.
@@ -189,7 +189,7 @@ def main():
     import pandas as pd
 
     print("=" * 60)
-    print("EdgeVoice Real-Speech Dataset Synthesis (gTTS + librosa)")
+    print("VoiceEdge Real-Speech Dataset Synthesis (gTTS + librosa)")
     print("=" * 60)
 
     metadata      = []

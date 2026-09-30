@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-EdgeVoice Desktop Continuous Stream Simulator & Accuracy Evaluation Suite
+VoiceEdge Desktop Continuous Stream Simulator & Accuracy Evaluation Suite
 Evaluates continuous 16kHz audio streams and measures TP, TN, FP, FN, Accuracy, Precision, Recall, F1, and False Activations/Hour.
 """
 
@@ -59,7 +59,7 @@ def run_single_window(interpreter, float_16000_samples):
     return probs, np.argmax(output_data)
 
 def main():
-    print(f"=== EdgeVoice Desktop Continuous Stream Simulator ({model_name}) ===")
+    print(f"=== VoiceEdge Desktop Continuous Stream Simulator ({model_name}) ===")
     if not os.path.exists(INT8_MODEL_PATH):
         raise FileNotFoundError(f"INT8 TFLite model not found: {INT8_MODEL_PATH}")
         
@@ -114,7 +114,7 @@ def main():
     false_activations_per_hour = fp / max(1e-6, total_hours)
     
     print("\n==================================================")
-    print("EDGEVOICE ACCURACY & PERFORMANCE METRICS")
+    print("VOICEEDGE ACCURACY & PERFORMANCE METRICS")
     print("==================================================")
     print(f"Model Evaluated:               {model_name}_int8.tflite")
     print(f"Multi-Class Argmax Accuracy:   {overall_accuracy:.2f}%")

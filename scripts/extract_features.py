@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-EdgeVoice Feature Extraction Library
+VoiceEdge Feature Extraction Library
 Computes 49x40 Normalized Log-Mel Spectrogram features from 16kHz WAV audio.
 Designed to match embedded ESP32 feature provider DSP output.
 """

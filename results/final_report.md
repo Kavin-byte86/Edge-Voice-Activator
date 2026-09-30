@@ -1,6 +1,6 @@
-# EdgeVoice: Final Compliance & Benchmark Report
+﻿# VoiceEdge: Final Compliance & Benchmark Report
 
-**Project Name**: EdgeVoice  
+**Project Name**: VoiceEdge  
 **Target Keyword**: "Akash Go"  
 **Target Device**: ESP32-WROOM-32 (38-Pin DevKit)  
 **Microphone**: INMP441 I2S MEMS (BCK=GPIO14, WS=GPIO15, SD=GPIO32)  
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-EdgeVoice delivers a complete, local, edge voice activator for the custom keyword **"Akash Go"**. The solution runs continuously on the ESP32-WROOM-32 (38-Pin) microcontroller, requiring zero internet connectivity or generic wake-word engines.
+VoiceEdge delivers a complete, local, VoiceEdge activator for the custom keyword **"Akash Go"**. The solution runs continuously on the ESP32-WROOM-32 (38-Pin) microcontroller, requiring zero internet connectivity or generic wake-word engines.
 
 The edge application consumes **173.50 KB RAM** (target $<256\text{ KB}$) and operates at **4.50% idle listening CPU utilization** (target $<10\%$), meeting all edge constraints on the ESP32-WROOM-32.
 

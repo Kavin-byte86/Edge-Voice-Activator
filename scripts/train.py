@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-EdgeVoice DS-CNN Model Trainer
+VoiceEdge DS-CNN Model Trainer
 Builds and trains Depthwise Separable CNN architectures for Keyword Spotting.
 Designed specifically for high accuracy with minimal memory footprint and INT8 compatibility.
 """

@@ -1,4 +1,4 @@
-/* EdgeVoice Auto-generated Model Header */
+﻿/* VoiceEdge Auto-generated Model Header */
 #ifndef MODEL_DATA_H_
 #define MODEL_DATA_H_
 

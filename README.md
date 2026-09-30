@@ -1,4 +1,4 @@
-# EdgeVoice: Edge Voice Activator for "Akash Go"
+﻿# VoiceEdge: VoiceEdge Activator for Custom keyword ("Akash Go")
 ### ESP32-WROOM-32 (38-Pin) · TFLite Micro INT8 · Zero Cloud Dependency
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 ---
 
-**EdgeVoice** is a TinyML keyword-spotting (KWS) system that detects the custom wake word **"Akash Go"** entirly on-device. No cloud, no API, no generic wake-word engine — just a tiny **16.80 KB INT8 neural network** running at **4.50% CPU utilization** on a bare ESP32-WROOM-32 microcontroller.
+**VoiceEdge** is a TinyML keyword-spotting (KWS) system that detects the custom wake word **"Akash Go"** entirly on-device. No cloud, no API, no generic wake-word engine — just a tiny **16.80 KB INT8 neural network** running at **4.50% CPU utilization** on a bare ESP32-WROOM-32 microcontroller.
 
 ---
 
@@ -526,7 +526,7 @@ When the device boots or detects a keyword, the following benchmark block is emi
 
 ```
 ====================================
-EDGEVOICE KWS BENCHMARK
+VOICEEDGE KWS BENCHMARK
 ====================================
 
 Device:
