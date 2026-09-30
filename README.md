@@ -1,4 +1,4 @@
-﻿# VoiceEdge: VoiceEdge Activator for Custom keyword ("Akash Go")
+﻿# VoiceEdge: Edge Voice Activator for Custom keyword ("Akash Go")
 ### ESP32-WROOM-32 (38-Pin) · TFLite Micro INT8 · Zero Cloud Dependency
 
 <p align="center">
